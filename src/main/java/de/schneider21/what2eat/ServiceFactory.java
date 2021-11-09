@@ -27,8 +27,9 @@ public class ServiceFactory {
     private IWeatherService weatherService;
 
     private ServiceFactory() {
-        menuService = new MensaKlService();
-        weatherService = new WeatherBitService();
+        int thirtyMinutesInMs = 30 * 60 * 60 * 1000;
+        menuService = new CachingMenuService(new MensaKlService(), thirtyMinutesInMs);
+        weatherService = new CachingWeatherService(new WeatherBitService(), thirtyMinutesInMs);
         mealService = new MealService(menuService, weatherService);
     }
 
