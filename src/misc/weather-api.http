@@ -1,0 +1,9 @@
+GET https://api.met.no/weatherapi/locationforecast/1.9/?lat=60.10&lon=9.58
+Accept: application/json
+
+###
+
+GET https://api.weatherbit.io/v2.0/forecast/daily?city=Kaiserslautern&country=DE&key=TODO
+Accept: application/json
+
+###

@@ -1,11 +1,10 @@
-# What2Eat
+# what2eat
 
 Sample app for demonstrating architecture design in SWAR lecture (HTWG WIN)
 
-There are two versions of the app in different branches:
-- branch [initial](https://github.com/neshanjo/what2eat/tree/initial) with the first version (no caching)
-- branch [with-cache](https://github.com/neshanjo/what2eat/tree/with-cache) with a more advanced version that caches weather and menu requests.
+## Getting started
 
-For more information, see the README file in the branches.
-
-Please do no use the code without the permission of the author. If you find it useful for your lecture or project, just contact me.
+- Create an account at [WeatherBit](https://www.weatherbit.io/) and note the API key
+- In `src/main/resources`, **copy** (not rename) the file `weatherbit.sample.properties` to `weatherbit.properties` and
+  enter the API key
+- Start the application by running `src/main/java/de/schneider21/what2eat/Application.java`
