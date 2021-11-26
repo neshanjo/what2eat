@@ -7,6 +7,7 @@ import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -14,6 +15,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class MensaKlService implements IMenuService {
 
     private static final String API_URL = "http://www.mensa-kl.de/api.php";

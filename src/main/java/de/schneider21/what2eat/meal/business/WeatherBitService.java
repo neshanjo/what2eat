@@ -6,39 +6,20 @@ import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
-import java.util.Properties;
 
+@Service
 public class WeatherBitService implements IWeatherService {
-
-    private static final String CONFIG_FILE = "./src/main/resources/weatherbit.properties";
 
     private final OkHttpClient client = new OkHttpClient();
     private final ObjectMapper mapper = new ObjectMapper();
-    private final String apiKey;
 
-    public WeatherBitService() {
-        Properties weatherBitConfig = loadConfig();
-        String apiKey = weatherBitConfig.getProperty("apiKey");
-        if (apiKey == null || apiKey.isEmpty()) {
-            throw new IllegalStateException("No apiKey defined in " + CONFIG_FILE);
-        }
-        this.apiKey = apiKey;
-    }
-
-    private Properties loadConfig() {
-        try (InputStream input = new FileInputStream(CONFIG_FILE)) {
-            Properties config = new Properties();
-            config.load(input);
-            return config;
-        } catch (IOException ex) {
-            throw new IllegalStateException("Error loading " + CONFIG_FILE, ex);
-        }
-    }
+    @Value("${weatherBitApiKey}")
+    private String apiKey;
 
     private ForecastResponse parseWeatherResponse(String body) throws IOException {
         return mapper.readerFor(ForecastResponse.class)

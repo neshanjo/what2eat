@@ -1,34 +1,34 @@
 package de.schneider21.what2eat.meal.api;
 
-import de.schneider21.what2eat.ServiceFactory;
-import de.schneider21.what2eat.framework.RestController;
 import de.schneider21.what2eat.meal.business.IMealService;
 import de.schneider21.what2eat.meal.data.BasicMeal;
 import de.schneider21.what2eat.meal.data.ExtendedMeal;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-public class MealController extends RestController {
+@RestController
+public class MealController {
 
-    public MealController() {
-        super();
-        addHttpGetMapping("/meal", this::getMeals);
-        addHttpGetMapping("/meal/.*", this::getMeal);
+    private IMealService mealService;
+
+    @Autowired
+    public MealController(IMealService mealService) {
+        this.mealService = mealService;
     }
 
-    public List<BasicMeal> getMeals(IRequestParameters parameters) {
-        final IMealService mealService = ServiceFactory.getInstance().getMealService();
+    @GetMapping("/meal")
+    public List<BasicMeal> getMeals() {
         final List<BasicMeal> meals = mealService.getAllAvailableMeals();
-
         return meals;
     }
 
-    public ExtendedMeal getMeal(IRequestParameters parameters) {
-        final String dateFromPath = parameters.getPath().substring("/meal/".length());
-
-        final IMealService mealService = ServiceFactory.getInstance().getMealService();
-        final ExtendedMeal meal = mealService.getExtendedMealForDate(dateFromPath);
-
+    @GetMapping("/meal/{date}")
+    public ExtendedMeal getMeal(@PathVariable String date) {
+        final ExtendedMeal meal = mealService.getExtendedMealForDate(date);
         return meal;
     }
 
