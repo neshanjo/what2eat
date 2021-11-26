@@ -7,6 +7,8 @@ import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -19,6 +21,7 @@ import java.util.stream.Collectors;
 public class MensaKlService implements IMenuService {
 
     private static final String API_URL = "http://www.mensa-kl.de/api.php";
+    private final Logger log = LoggerFactory.getLogger(MensaKlService.class);
 
     /**
      * This is the format as returned by the mensa-kl API
@@ -104,8 +107,7 @@ public class MensaKlService implements IMenuService {
                     .map(lunchEntry -> convertToMeal(lunchEntry))
                     .collect(Collectors.toList());
         } catch (IOException e) {
-            System.out.println("MealService: Exception when listing all lunch entries");
-            e.printStackTrace();
+            log.error("Exception when listing all lunch entries", e);
             return Collections.emptyList();
         }
     }
@@ -132,8 +134,7 @@ public class MensaKlService implements IMenuService {
             }
             return convertToMeal(meals.get(0));
         } catch (IOException e) {
-            System.out.println("MealService: Exception when listing meals for " + date);
-            e.printStackTrace();
+            log.error("Exception when listing meals for " + date, e);
             return null;
         }
     }
@@ -143,7 +144,7 @@ public class MensaKlService implements IMenuService {
         if (!body.startsWith("-1")) {
             return body;
         }
-        System.out.println("MensaKlService: no results found");
+        log.info("no results found");
         return "[]";
     }
 

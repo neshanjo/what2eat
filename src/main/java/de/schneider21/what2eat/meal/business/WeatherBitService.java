@@ -6,6 +6,8 @@ import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,7 @@ import java.util.List;
 @Service
 public class WeatherBitService implements IWeatherService {
 
+    private final Logger log = LoggerFactory.getLogger(WeatherBitService.class);
     private final OkHttpClient client = new OkHttpClient();
     private final ObjectMapper mapper = new ObjectMapper();
 
@@ -40,11 +43,11 @@ public class WeatherBitService implements IWeatherService {
                 .url(url)
                 .build();
 
-        System.out.printf("WeatherBitService: Requesting weather data for %s (%s)\n", cityName, countryCode);
+        log.info("Requesting weather data for {} ({})", cityName, countryCode);
         try {
             final Response response = client.newCall(request).execute();
             if (!response.isSuccessful()) {
-                System.out.printf("Could not get weather, got status %s and body %s\n", response.code(),
+                log.error("Could not get weather, got status {} and body {}", response.code(),
                         response.body().string());
                 return null;
             }
@@ -60,7 +63,7 @@ public class WeatherBitService implements IWeatherService {
                     .findFirst()
                     .orElse(null);
         } catch (IOException e) {
-            System.out.println("Could not get weather: " + e.getMessage());
+            log.error("Could not get weather", e);
             return null;
         }
     }

@@ -2,6 +2,8 @@ package de.schneider21.what2eat.meal.business;
 
 import de.schneider21.what2eat.meal.data.BasicMeal;
 import de.schneider21.what2eat.meal.data.ExtendedMeal;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +13,7 @@ import java.util.Objects;
 @Service
 public class MealService implements IMealService {
 
+    private final Logger log = LoggerFactory.getLogger(MealService.class);
     private IMenuService menuService;
     private IWeatherService weatherService;
 
@@ -35,9 +38,9 @@ public class MealService implements IMealService {
         }
         final Double temperatureInCelsius = weatherService.getTemperatureInCelsius("Kaiserslautern", "DE", dateString);
         if (temperatureInCelsius != null) {
-            System.out.printf("MealService: Temperature received is %.2f°C\n", temperatureInCelsius);
+            log.info("Temperature received is {}°C", temperatureInCelsius);
         } else {
-            System.out.printf("MealService: No temperature value could be found\n");
+            log.info("No temperature value could be found");
         }
         int coldBowlProbabilityInPercent = calculateColdBowlProbabilityInPercent(temperatureInCelsius);
         ExtendedMeal extendedMeal = new ExtendedMeal(meal.getDate(), meal.getTitle(), meal.getPrice(),
