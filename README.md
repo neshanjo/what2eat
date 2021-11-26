@@ -10,6 +10,9 @@ There are two versions of the app in different branches:
   better testability.
 - branch [with-cache](https://github.com/neshanjo/what2eat/tree/with-cache) with a further advanced version that caches
   weather and menu requests for a better performance.
+- branch [with-spring-boot](https://github.com/neshanjo/what2eat/tree/with-spring-boot) is based on with-di, but uses 
+  the Spring Boot framework.
+
 
 For more information, see the README file in the branches.
 
