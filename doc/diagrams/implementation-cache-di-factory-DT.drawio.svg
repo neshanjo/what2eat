@@ -1,0 +1,679 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1379px" height="885px" viewBox="-0.5 -0.5 1379 885" content="&lt;mxfile scale=&quot;1&quot; border=&quot;10&quot;&gt;&lt;diagram id=&quot;DnpxP7N6m8DDUr7VT1Bi&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;" style="background-color: rgb(255, 255, 255);">
+    <defs/>
+    <g>
+        <rect x="511.88" y="192" width="433.25" height="100" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 435px; height: 100px; padding-top: 192px; margin-left: 512px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 433px; height: 100px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: nowrap;">
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <b>
+                                        MealService
+                                    </b>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px"></p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    + MealService(menuService: IMenuService, weatherService: IWeatherService)
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    + calculateColdBowlProbabilityInPercent(
+                                    <span>
+                                        temperature: Double) : int
+                                    </span>
+                                </p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    + getExtendedMealForDate(dateString: String)
+                                    <span>
+                                        : ExtendedMeal
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="512" y="204" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    MealService...
+                </text>
+            </switch>
+        </g>
+        <rect x="486.88" y="697" width="206" height="130" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 208px; height: 130px; padding-top: 697px; margin-left: 487px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 206px; height: 130px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: nowrap;">
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <b>
+                                        WeatherBitService
+                                    </b>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px"></p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    + WeatherBitService(
+                                    <span>
+                                        )
+                                    </span>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        + getTemperatureInCelsius(
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        cityName: String,
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        countryCode: String,
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        dateString: String): Double
+                                    </span>
+                                    <br/>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="487" y="709" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    WeatherBitService...
+                </text>
+            </switch>
+        </g>
+        <rect x="750.88" y="527" width="323" height="90" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 325px; height: 90px; padding-top: 527px; margin-left: 751px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 323px; height: 90px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: nowrap;">
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <b>
+                                        CachingMenuService
+                                    </b>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px"></p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    + CachingMenuService(menu
+                                    <span>
+                                        Service: IMenuService,
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        cachingTimeInMs: long
+                                    </span>
+                                    <span>
+                                        )
+                                    </span>
+                                    <span>
+                                        )
+                                    </span>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        + getMealForDate(date: String): BasicMeal
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="751" y="539" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    CachingMenuService...
+                </text>
+            </switch>
+        </g>
+        <path d="M 675.61 292 L 608.48 355.46" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 610.35 348.88 L 607.66 356.23 L 615.16 353.97" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 777.5 292 L 839.62 355.4" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 833 353.65 L 840.4 356.2 L 838 348.75" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="511.88" y="47" width="433.25" height="100" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 435px; height: 100px; padding-top: 47px; margin-left: 512px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 433px; height: 100px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: nowrap;">
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <i>
+                                        &lt;&lt;interface&gt;&gt;
+                                    </i>
+                                </p>
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <b>
+                                        I
+                                    </b>
+                                    <b>
+                                        MealService
+                                    </b>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px"></p>
+                                <p style="margin: 0px 0px 0px 4px"></p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    + calculateColdBowlProbabilityInPercent(
+                                    <span>
+                                        temperature: Double) : int
+                                    </span>
+                                </p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    + getExtendedMealForDate(dateString: String)
+                                    <span>
+                                        : ExtendedMeal
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="512" y="59" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    &lt;&lt;interface&gt;&gt;...
+                </text>
+            </switch>
+        </g>
+        <rect x="440.38" y="357" width="206" height="120" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 208px; height: 120px; padding-top: 357px; margin-left: 440px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 206px; height: 120px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: nowrap;">
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <i>
+                                        &lt;&lt;interface&gt;&gt;
+                                    </i>
+                                </p>
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <b>
+                                        IWeatherService
+                                    </b>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px"></p>
+                                <p style="margin: 0px ; margin-left: 4px"></p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        + getTemperatureInCelsius(
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        cityName: String,
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        countryCode: String,
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        dateString: String): Double
+                                    </span>
+                                    <br/>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="440" y="369" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    &lt;&lt;interface&gt;&gt;...
+                </text>
+            </switch>
+        </g>
+        <rect x="750.88" y="357" width="259" height="80" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 261px; height: 80px; padding-top: 357px; margin-left: 751px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 259px; height: 80px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: nowrap;">
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <i>
+                                        &lt;&lt;interface&gt;&gt;
+                                    </i>
+                                </p>
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <b>
+                                        IMenuService
+                                    </b>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px"></p>
+                                <p style="margin: 0px ; margin-left: 4px"></p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        + getMealForDate(date: String): BasicMeal
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="751" y="369" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    &lt;&lt;interface&gt;&gt;...
+                </text>
+            </switch>
+        </g>
+        <path d="M 728.51 192 L 728.51 165.12" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+        <path d="M 728.51 148.12 L 737.01 165.12 L 720.01 165.12 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 658.27 697 L 703.63 653.89 Q 710.88 647 710.88 637 L 710.88 517 Q 710.88 507 702.07 502.27 L 662.34 480.92" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+        <path d="M 647.36 472.87 L 666.36 473.43 L 658.32 488.41 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 904.15 527 L 890.95 454.82" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+        <path d="M 887.9 438.1 L 899.31 453.29 L 882.59 456.35 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="11.19" y="37" width="240.88" height="120" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 243px; height: 120px; padding-top: 37px; margin-left: 11px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 241px; height: 120px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: nowrap;">
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <b>
+                                        ServiceFactory
+                                    </b>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px"></p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    - ServiceFactory()
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    <span>
+                                        + getInstance() : ServiceFactory
+                                    </span>
+                                </p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    + getMealService() : IMealService
+                                </p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    + getMenuService() : IMenuService
+                                </p>
+                                <p style="margin: 0px 0px 0px 4px">
+                                    <span>
+                                        + getWeatherService() : IWeatherService
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="11" y="49" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    ServiceFactory...
+                </text>
+            </switch>
+        </g>
+        <path d="M 252.07 97 L 342.63 97 L 342.63 242 L 509.64 242" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 503.76 245.5 L 510.76 242 L 503.76 238.5" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 252.07 97 L 342.63 97 L 342.63 582 L 351.64 582" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 345.76 585.5 L 352.76 582 L 345.76 578.5" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 252.07 97 L 342.63 97 L 342.63 17 L 1100.88 17 L 1100.88 572 L 1076.12 572" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1082 568.5 L 1075 572 L 1082 575.5" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="10.13" y="352" width="252.5" height="90" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 255px; height: 90px; padding-top: 352px; margin-left: 10px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 253px; height: 90px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: nowrap;">
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <b>
+                                        MealController
+                                    </b>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px"></p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    + MealController(
+                                    <span>
+                                        )
+                                    </span>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        + getMeal(parameters: IRequestParameters
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        ) : ExtendedMeal
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="10" y="364" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    MealController...
+                </text>
+            </switch>
+        </g>
+        <rect x="10.13" y="177" width="306" height="80" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 308px; height: 80px; padding-top: 177px; margin-left: 10px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 306px; height: 80px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: nowrap;">
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <i>
+                                        &lt;&lt;interface&gt;&gt;
+                                    </i>
+                                </p>
+                                <div style="text-align: center">
+                                    <span>
+                                        <b>
+                                            IRequestParameters
+                                        </b>
+                                    </span>
+                                </div>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px"></p>
+                                <p style="margin: 0px ; margin-left: 4px"></p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        + getPath() : String
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        + getQueryParameter(parameterName: String) : String
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="10" y="189" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    &lt;&lt;interface&gt;&gt;...
+                </text>
+            </switch>
+        </g>
+        <rect x="261.63" y="67" width="90" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 88px; height: 1px; padding-top: 74px; margin-left: 264px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <span style="color: rgb(0 , 0 , 0) ; font-family: &quot;verdana&quot; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none">
+                                    «creates»
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="264" y="86" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    «creates»
+                </text>
+            </switch>
+        </g>
+        <path d="M 262.63 363.95 L 535.33 292.57" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 530.53 297.44 L 536.42 292.28 L 528.76 290.67" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="1147.63" y="52" width="206" height="170" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 208px; height: 170px; padding-top: 52px; margin-left: 1148px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 206px; height: 170px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: nowrap;">
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <b>
+                                        BasicMeal
+                                    </b>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px"></p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    + BasicMeal(date: String, title: String,
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    price: BigDecimal)
+                                    <br/>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    + getDate() : String
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    + getPrice() : BigDecimal
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    + getTitle() : String
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    + setDate(date: String) : void
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    + setPrice(price: BigDecimal) : void
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    + setTitle(title: String) : void
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="1148" y="64" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    BasicMeal...
+                </text>
+            </switch>
+        </g>
+        <rect x="1133.63" y="262" width="234" height="170" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 236px; height: 170px; padding-top: 262px; margin-left: 1134px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 234px; height: 170px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: nowrap;">
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <b>
+                                        ExtendedMeal
+                                    </b>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px"></p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    + ExtendedMeal(date: String,
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    title: String,
+                                    <span>
+                                        price: BigDecimal,
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    coldBowlProbabilityInPercent: int)
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    + getColdBowlProbabilityInPercent(): int
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        + setColdBowlProbabilityInPercent(
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        coldBowlProbabilityInPercent: int): void
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="1134" y="274" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    ExtendedMeal...
+                </text>
+            </switch>
+        </g>
+        <path d="M 1250.63 262 L 1250.63 240.12" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1250.63 223.12 L 1259.13 240.12 L 1242.13 240.12 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="353.88" y="517" width="339" height="130" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 341px; height: 130px; padding-top: 517px; margin-left: 354px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 339px; height: 130px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: nowrap;">
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <b>
+                                        CachingWeatherService
+                                    </b>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px"></p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    + CachingWeatherService(weatherService: IWeatherService,
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    cachingTimeInMs: long
+                                    <span>
+                                        )
+                                    </span>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        + getTemperatureInCelsius(
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        cityName: String,
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        countryCode: String,
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        dateString: String): Double
+                                    </span>
+                                    <br/>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="354" y="529" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    CachingWeatherService...
+                </text>
+            </switch>
+        </g>
+        <path d="M 531.26 517 L 533.93 494.99" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+        <path d="M 535.97 478.11 L 542.37 496.01 L 525.49 493.96 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 547.39 647 L 565.09 694.9" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 559.77 690.6 L 565.48 695.95 L 566.34 688.17" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="750.88" y="697" width="259" height="80" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 261px; height: 80px; padding-top: 697px; margin-left: 751px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left; width: 259px; height: 80px; overflow: hidden;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; width: 100%; height: 100%; white-space: nowrap;">
+                                <p style="margin: 0px ; margin-top: 4px ; text-align: center">
+                                    <b>
+                                        MensaKlService
+                                    </b>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px"></p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    + MensaKlService(
+                                    <span>
+                                        )
+                                    </span>
+                                </p>
+                                <hr size="1"/>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <span>
+                                        + getMealForDate(date: String): BasicMeal
+                                    </span>
+                                </p>
+                                <p style="margin: 0px ; margin-left: 4px">
+                                    <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="751" y="709" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    MensaKlService...
+                </text>
+            </switch>
+        </g>
+        <path d="M 833.88 697 L 748.46 623.52 Q 740.88 617 740.88 607 L 740.88 527 Q 740.88 517 748.46 510.48 L 820.14 448.82" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+        <path d="M 833.03 437.73 L 825.69 455.26 L 814.6 442.37 Z" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 903.65 617 L 888.56 694.8" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 886.25 688.36 L 888.35 695.9 L 893.12 689.7" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 252.07 97 L 342 97 L 342 773 L 484.64 773" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 478.76 776.5 L 485.76 773 L 478.76 769.5" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 252.07 97 L 342.63 97 L 342.63 17 L 1100.88 17 L 1101 736 L 1017.24 736" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1023.12 732.5 L 1016.12 736 L 1023.12 739.5" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="11.19" y="854" width="595.81" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 594px; height: 1px; padding-top: 864px; margin-left: 13px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 11px; font-family: Verdana; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; overflow-wrap: normal;">
+                                <font style="font-size: 11px">
+                                    Figure: Caching with Dependency Injection and Service Factory (Data+Functions@Runtime)
+                                </font>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="13" y="867" fill="rgb(0, 0, 0)" font-family="Verdana" font-size="11px" font-weight="bold">
+                    Figure: Caching with Dependency Injection and Service Factory (Data+Functions@Runtime)
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>
