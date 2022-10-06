@@ -61,8 +61,7 @@ section {
 
 | Categorization  |                                                                                                                |                    |
 | --------------- | -------------------------------------------------------------------------------------------------------------- | ------------------ |
-| Scenario Name     | Package Size                                                                                                   |
-|                 |
+| Scenario Name     | Package Size                                                                                                   |        |                 |
 | Scenario ID       | Q.Size                                                                                                         |
 | **Description** |                                                                                                                | **Quantification** |
 | Environment     | The code is ready for a new deployment.                                                                        |                    |
