@@ -87,7 +87,7 @@ public class MensaKlService implements IMenuService {
                 .parse(API_URL)
                 .newBuilder()
                 .addQueryParameter("date", "all")
-                .addQueryParameter("loc", "2") // only requesting menus from "Ausgabe 2"
+                //.addQueryParameter("loc", "2") // uncomment to only request menus from "Ausgabe 2"
                 .addQueryParameter("format", "json");
         String url = urlBuilder.build().toString();
 
@@ -114,7 +114,7 @@ public class MensaKlService implements IMenuService {
                 .parse(API_URL)
                 .newBuilder()
                 .addQueryParameter("date", date)
-                .addQueryParameter("loc", "2") // only requesting menus from "Ausgabe 2"
+//                .addQueryParameter("loc", "2") // uncomment to only request menus from "Ausgabe 2"
                 .addQueryParameter("format", "json");
         String url = urlBuilder.build().toString();
 
@@ -138,6 +138,7 @@ public class MensaKlService implements IMenuService {
 
     private String bodyOrEmptyArrayIfError(Response response) throws IOException {
         final String body = response.body().string();
+//        System.out.println("MensaKlService: Body: " + body);
         if (!body.startsWith("-1")) {
             return body;
         }
