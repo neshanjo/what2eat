@@ -12,17 +12,19 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class MensaKlService implements IMenuService {
 
     private static final String API_URL = "http://www.mensa-kl.de/api.php";
+    private static final Set<String> VALID_LOCATIONS = Set.of("1", "2", "1veg", "2veg");
 
     /**
      * This is the format as returned by the mensa-kl API
      */
     @JsonIgnoreProperties(ignoreUnknown = true)
-    private static class LunchEntry {
+    static class LunchEntry {
         //{
         //	"m_id": "43345",
         //	"date": "2019-01-21",
@@ -87,7 +89,6 @@ public class MensaKlService implements IMenuService {
                 .parse(API_URL)
                 .newBuilder()
                 .addQueryParameter("date", "all")
-//                .addQueryParameter("loc", "2") // uncomment to only request menus from "Ausgabe 2"
                 .addQueryParameter("format", "json");
         String url = urlBuilder.build().toString();
 
@@ -97,7 +98,7 @@ public class MensaKlService implements IMenuService {
 
         try {
             final Response response = client.newCall(request).execute();
-            return parseListResponse(bodyOrEmptyArrayIfError(response))
+            return parseAndFilterListResponse(bodyOrEmptyArrayIfError(response))
                     .stream()
                     .map(lunchEntry -> convertToMeal(lunchEntry))
                     .collect(Collectors.toList());
@@ -114,7 +115,6 @@ public class MensaKlService implements IMenuService {
                 .parse(API_URL)
                 .newBuilder()
                 .addQueryParameter("date", date)
-//                .addQueryParameter("loc", "2") // uncomment to only request menus from "Ausgabe 2"
                 .addQueryParameter("format", "json");
         String url = urlBuilder.build().toString();
 
@@ -124,7 +124,7 @@ public class MensaKlService implements IMenuService {
 
         try {
             final Response response = client.newCall(request).execute();
-            final List<LunchEntry> meals = parseListResponse(bodyOrEmptyArrayIfError(response));
+            final List<LunchEntry> meals = parseAndFilterListResponse(bodyOrEmptyArrayIfError(response));
             if (meals.isEmpty()) {
                 return null;
             }
@@ -138,6 +138,7 @@ public class MensaKlService implements IMenuService {
 
     private String bodyOrEmptyArrayIfError(Response response) throws IOException {
         final String body = response.body().string();
+        System.out.println("MensaKlService: Body (all locations): " + body);
         if (!body.startsWith("-1")) {
             return body;
         }
@@ -145,10 +146,13 @@ public class MensaKlService implements IMenuService {
         return "[]";
     }
 
-    private List<LunchEntry> parseListResponse(String body) throws IOException {
-        return new ObjectMapper().reader()
+    List<LunchEntry> parseAndFilterListResponse(String body) throws IOException {
+        List<LunchEntry> lunchEntries = new ObjectMapper().reader()
                 .forType(mapper.getTypeFactory().constructCollectionType(List.class, LunchEntry.class))
                 .readValue(body.replace("\t", " "));
+        return lunchEntries.stream()
+                .filter(entry -> VALID_LOCATIONS.contains(entry.getLoc()))
+                .collect(Collectors.toList());
     }
 
     private BasicMeal convertToMeal(LunchEntry lunchEntry) {
