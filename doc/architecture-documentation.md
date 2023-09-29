@@ -1,14 +1,14 @@
 # What2Eat - Architecture documentation <!-- omit in toc -->
 
-Based on version 1.0.0 of the [ADF documentation template](https://github.com/architecture-decomposition-framework/adf-documentation-template).
+Based on version 2.0.0 of the [ADF documentation template](https://github.com/architecture-decomposition-framework/adf-documentation-template).
 
 ## Table of contents <!-- omit in toc -->
 
 - [1. Introduction](#1-introduction)
   - [1.1. Business context](#11-business-context)
   - [1.2. System overview](#12-system-overview)
-  - [1.3. Constraints](#13-constraints)
-  - [1.4. Stakeholders](#14-stakeholders)
+  - [1.3. Stakeholders](#13-stakeholders)
+  - [1.4. Constraints](#14-constraints)
   - [1.5. Document goals](#15-document-goals)
 - [2. System context and domain](#2-system-context-and-domain)
   - [2.1. System context delineation](#21-system-context-delineation)
@@ -18,17 +18,16 @@ Based on version 1.0.0 of the [ADF documentation template](https://github.com/ar
   - [3.2. Quality attributes](#32-quality-attributes)
 - [4. System decomposition](#4-system-decomposition)
   - [4.1. Solution approach and key architecture decisions](#41-solution-approach-and-key-architecture-decisions)
-  - [4.2. System domains](#42-system-domains)
-  - [4.3. System structure](#43-system-structure)
-  - [4.4. Data model](#44-data-model)
-  - [4.5. Code organization (mapping runtime to devtime)](#45-code-organization-mapping-runtime-to-devtime)
-  - [4.6. Build Process](#46-build-process)
-  - [4.7. Deployment and Operation](#47-deployment-and-operation)
-  - [4.8. Technologies](#48-technologies)
-    - [4.8.1. Architecture drivers](#481-architecture-drivers)
-    - [4.8.2. Solution idea](#482-solution-idea)
-    - [4.8.3. Design decisions](#483-design-decisions)
-    - [4.8.4. Discarded alternatives](#484-discarded-alternatives)
+  - [4.2. System structure](#42-system-structure)
+  - [4.3. Data model](#43-data-model)
+  - [4.4. Code organization (mapping runtime to devtime)](#44-code-organization-mapping-runtime-to-devtime)
+  - [4.5. Build Process](#45-build-process)
+  - [4.6. Deployment and Operation](#46-deployment-and-operation)
+  - [4.7. Technologies](#47-technologies)
+    - [4.7.1. Architecture drivers](#471-architecture-drivers)
+    - [4.7.2. Solution idea](#472-solution-idea)
+    - [4.7.3. Design decisions](#473-design-decisions)
+    - [4.7.4. Discarded alternatives](#474-discarded-alternatives)
 - [5. Quality concepts](#5-quality-concepts)
   - [5.1. Testability concept](#51-testability-concept)
     - [5.1.1. Architecture drivers](#511-architecture-drivers)
@@ -62,7 +61,15 @@ The purpose of the system is on the one hand to offer certain functionality (caf
 
 Furthermore, while a real world application would consist of a frontend and server part, this documentation focuses on the server part which uses Java - a technology WIN students are familiar with.
 
-### 1.3. Constraints
+### 1.3. Stakeholders
+
+Stakeholders of this project and system are
+
+- the teacher of the lecture _Software-Architektur_ (project lead),
+- attendants of the lecture _Software-Architektur_, WIN and GIB students ("users" in terms of learning about software architecture) and
+- potential cafeteria customers (end users).
+
+### 1.4. Constraints
 
 The following constraints have been identified:
 
@@ -79,14 +86,6 @@ The following constraints have been identified:
   - If x ≥ 30°C, then p = 100%.
 
 **C4.** All external services used by the system must be free to use.
-
-### 1.4. Stakeholders
-
-Stakeholders of this project and system are
-
-- the teacher of the lecture _Software-Architektur_ (project lead),
-- attendants of the lecture _Software-Architektur_, WIN and GIB students ("users" in terms of learning about software architecture) and
-- potential cafeteria customers (end users).
 
 ### 1.5. Document goals
 
@@ -108,15 +107,17 @@ There is a single user type interacting with the system. Decisions have been mad
 
 ### 2.2. Domain model
 
-In the following figure, the main data used in the system is depicted.
+In this relatively small system, there are two domains: Meals and weather. Weather data is mainly handled in an external system.
+
+In the following figure, the main entities used in the system are depicted.
 
 ![domain model](diagrams/domain-model-RT.drawio.svg)
 
-The data model is refined further in the section [4.3. Data model](#44-data-model).
+The data model is refined further in the section [4.3. Data model](#43-data-model).
 
 ## 3. Architecture drivers (function and quality)
 
-Software architecture is driven by business goals, constraints, functional requirements and quality attributes of the system. The first two types can be found in [1.1. Business Context](#11-business-context) and [1.3. Constraints](#13-constraints), while the latter two types of drivers are described in this chapter.
+Software architecture is driven by business goals, constraints, functional requirements and quality attributes of the system. The first two types can be found in [1.1. Business Context](#11-business-context) and [1.4. Constraints](#14-constraints), while the latter two types of drivers are described in this chapter.
 
 ### 3.1. Key functional requirements
 
@@ -219,13 +220,9 @@ The key design decision is to use different components for data display and data
 
 ![coarse functional decomposition](diagrams/coarse-functional-decomposition-RT.drawio.svg)
 
-This concept is further refined by applying the client-server pattern, see [4.4. Deployment and Operation](#47-deployment-and-operation).
+This concept is further refined by applying the client-server pattern, see [4.6. Deployment and Operation](#46-deployment-and-operation).
 
-### 4.2. System domains
-
-In this relatively small system, there is only one domain: Meal data. The other domain, weather data, is mainly handled in an external system.
-
-### 4.3. System structure
+### 4.2. System structure
 
 The system is decomposed into several components that all have their own concerns.
 
@@ -235,7 +232,7 @@ Design decisions:
 
 - MealService as central service, WeatherService and MenuService as subservices that will query the external system.
 
-### 4.4. Data model
+### 4.3. Data model
 
 The figure from the last section already illustrated the intended data flow between the components. This is the data model in more detail:
 
@@ -245,7 +242,7 @@ Design decisions:
 
 - We have modelled separate data entities for query and response.
 
-### 4.5. Code organization (mapping runtime to devtime)
+### 4.4. Code organization (mapping runtime to devtime)
 
 Components are mapped 1:1 to modules for realizing the components at devtime, see the following two figures.
 
@@ -263,11 +260,11 @@ Discarded Alternatives:
 
 - The modules are not split up any further since their functionality is already quite simple and limited.
 
-### 4.6. Build Process
+### 4.5. Build Process
 
 To build a releasable and deployable JAR file, the Maven package command can be used. However, currently, the system is built and run within IntelliJ IDE only and used for local testing and demonstration.
 
-### 4.7. Deployment and Operation  
+### 4.6. Deployment and Operation  
 
 The system is decomposed into a client and a server part. These correspond to the Meal display and meal data acquisition components. During development, both client and server can be run on the same machine:
 
@@ -279,15 +276,15 @@ In the future, the server part could be deployed to a dedicated machine. Several
 
 ![deployment-driven-decomposition-RT](diagrams/deployment-driven-decomposition-RT.drawio.svg)
 
-### 4.8. Technologies
+### 4.7. Technologies
 
 The choice of technologies is cross-cutting concept and addresses certain drivers. Thus, we describe it here in a similar way as the quality concepts in the next chapter.
 
-#### 4.8.1. Architecture drivers
+#### 4.7.1. Architecture drivers
 
 The choice of technologies addresses the drivers _C2_, _C4_, _G2_, _Q.Comprehensibility_, _Q.Performance.Threads_, _Q.Size_
 
-#### 4.8.2. Solution idea
+#### 4.7.2. Solution idea
 
 ![df](diagrams/systems-technology-selection-RT.drawio.svg)
 
@@ -297,7 +294,7 @@ Regarding the backend part, we have chosen the following Java libraries:
 - Jackson, a JSON (de-)serialization library,
 - okhttp, a REST client.
 
-#### 4.8.3. Design decisions
+#### 4.7.3. Design decisions
 
 We use
 
@@ -306,7 +303,7 @@ We use
 - NanoHttpd and implement the REST backend ourselves since it is very lightweight and offers the students the possibility to fully comprehend how REST requests can be handled with Java and
 - Jackson for JSON (de-)serialization and okhttp as REST client since these libraries are widely used, well documented and comparatively easy to understand.
 
-#### 4.8.4. Discarded alternatives
+#### 4.7.4. Discarded alternatives
 
 We do not use Spring Boot since it drastically increases learning curve and deployment size.
 
@@ -378,7 +375,7 @@ It is assumed that the system is restarted at least once a month since, regardin
 
 ## 7. Outlook and future plans
 
-In the future, server deployment as described in [4.7. Deployment and Operation](#47-deployment-and-operation), figure _Deployment-driven decomposition into clients and server_ could be made possible by adding build scripts and, optionally, also a docker file.
+In the future, server deployment as described in [4.6. Deployment and Operation](#46-deployment-and-operation), figure _Deployment-driven decomposition into clients and server_ could be made possible by adding build scripts and, optionally, also a docker file.
 
 Furthermore, a frontend implementation with technologies that WIN students are familiar with would be a useful addition to this example (also documentation-wise).
 
