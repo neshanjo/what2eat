@@ -149,17 +149,17 @@ Quality attributes are described in form of the architecture scenario template. 
 
 | Categorization  |                                                                                                                                                                                                                                                              |                                                                                     |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |-------------------------------------------------------------------------------------|
-| Scenario Name   | Development start time                                                                                                                                                                                                                                       |
-| Scenario ID     | Q.EasyDevStart                                                                                                                                                                                                                                               |
+| Scenario Name   | Development start time                                                                                                                                                                                                                                        | |
+| Scenario ID     | Q.EasyDevStart                                                                                                                                                                                                                                               | |
 | **Description** |                                                                                                                                                                                                                                                              | **Quantification**                                                                  |
 | Environment     | A developer has a computer with working internet connection and standard WIN dev environment: Java version J is installed, IntelliJ version I, git version G and Maven version M installed. | Internet bandwidth &ge; 1 MBit/s, J &ge; 17, I &ge; 2021.3, G &ge; 2.33, M &ge; 3.8 |
-| Stimulus        | The developer wants to checkout and run the project for local testing.                                                                                                                                                                                       |
+| Stimulus        | The developer wants to checkout and run the project for local testing.                                                                                                                                                                                       | |
 | Response        | The system is running and answering the first request in T.                                                                                                                                                                                                  | T &le; 5 minutes                                                                    |
 
 | Categorization  |                                                                                |                    |
 | --------------- | ------------------------------------------------------------------------------ | ------------------ |
-| Scenario Name   | Code comprehensibility                                                         |                    |  |
-| Scenario ID     | Q.Comprehensibility                                                            |
+| Scenario Name   | Code comprehensibility                                                         |                    |
+| Scenario ID     | Q.Comprehensibility                                                            |                    |
 | **Description** |                                                                                | **Quantification** |
 | Environment     | A WIN student in semester S has checked out the project and started the system | S &ge; 6           |
 | Stimulus        | The student executes a function of the system.                                 |                    |
@@ -167,8 +167,8 @@ Quality attributes are described in form of the architecture scenario template. 
 
 | Categorization  |                                                                                                                |                    |
 | --------------- | -------------------------------------------------------------------------------------------------------------- | ------------------ |
-| Scenario Name   | Package Size                                                                                                   |                    |  |
-| Scenario ID     | Q.Size                                                                                                         |
+| Scenario Name   | Package Size                                                                                                   |                    |
+| Scenario ID     | Q.Size                                                                                                         | |
 | **Description** |                                                                                                                | **Quantification** |
 | Environment     | The code is ready for a new deployment.                                                                        |                    |
 | Stimulus        | A new deployment artifact is built to update the production app.                                               |                    |
@@ -176,8 +176,8 @@ Quality attributes are described in form of the architecture scenario template. 
 
 | Categorization  |                                                                     |                                                                                                                                                                                                                                                                                                                   |
 | --------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Scenario Name   | Simple one-user educational system                                  |                                                                                                                                                                                                                                                                                                                   |  |
-| Scenario ID     | Q.Performance.Threads                                               |
+| Scenario Name   | Simple one-user educational system                                  |                                                                                                                                                                                                                                                                                                                   |
+| Scenario ID     | Q.Performance.Threads                                               | |
 | **Description** |                                                                     | **Quantification**                                                                                                                                                                                                                                                                                                |
 | Environment     | The system is running.                                              |                                                                                                                                                                                                                                                                                                                   |
 | Stimulus        | The system gets x parallel requests                                 | x = 1 (_simple educational system, no parallelism required!_)                                                                                                                                                                                                                                                     |
@@ -185,8 +185,8 @@ Quality attributes are described in form of the architecture scenario template. 
 
 | Categorization  |                                                                                  |                                                  |
 | --------------- | -------------------------------------------------------------------------------- | ------------------------------------------------ |
-| Scenario Name   | (Almost) instant meal display                                                    |                                                  |  |
-| Scenario ID     | Q.Performance.Response                                                           |
+| Scenario Name   | (Almost) instant meal display                                                    |                                                  |
+| Scenario ID     | Q.Performance.Response                                                           | |
 | **Description** |                                                                                  | **Quantification**                               |
 | Environment     | The system is running. The cafeteria is open on the current day.                 |                                                  |
 | Stimulus        | A user requests the meal(s) of today.                                            |                                                  |
@@ -194,8 +194,8 @@ Quality attributes are described in form of the architecture scenario template. 
 
 | Categorization  |                                                                                                                                                                                     |                                    |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| Scenario Name   | Offline testability                                                                                                                                                                 |                                    |  |
-| Scenario ID     | Q.Testability.Offline                                                                                                                                                               |
+| Scenario Name   | Offline testability                                                                                                                                                                 |                                    |
+| Scenario ID     | Q.Testability.Offline                                                                                                                                                               | |
 | **Description** |                                                                                                                                                                                     | **Quantification**                 |
 | Environment     | A developer has set up the project for local development and testing. There is internet connection on the computer. The developer executes all unit and module tests. x tests pass. | x = number of passed tests         |
 | Stimulus        | The developer goes offline and executes unit and module tests again.                                                                                                                | Internet bandwidth = 0 Mbit/s      |
@@ -203,8 +203,8 @@ Quality attributes are described in form of the architecture scenario template. 
 
 | Categorization  |                                                                                                       |                                                                    |
 | --------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| Scenario Name   | Weather testability                                                                                   |                                                                    |  |
-| Scenario ID     | Q.Testability.Weather                                                                                 |
+| Scenario Name   | Weather testability                                                                                   |                                                                    |
+| Scenario ID     | Q.Testability.Weather                                                                                 | |
 | **Description** |                                                                                                       | **Quantification**                                                 |
 | Environment     | A developer has set up the project for local development and testing. It is winter in Kaiserslautern. | temperature in Kaiserslautern < 20°C                               |
 | Stimulus        | The developer wants to test for different cold bowl probability values.                               | cold bowl probability values 0%, 1%, 21%, 45%, 50%, 78%, 99%, 100% |

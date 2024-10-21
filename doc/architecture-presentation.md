@@ -1,9 +1,11 @@
+<!-- some markdownlint rules don't make sense in MARP -->
+<!-- markdownlint-disable MD041 MD003 MD033 -->
 ---
 marp: true
 theme: default
 paginate: true
 footer: What2Eat - presentation example
-# No number and footer on the first slide
+<!-- No number and footer on the first slide -->
 _paginate: false
 _footer: " "
 ---
@@ -61,8 +63,8 @@ section {
 
 | Categorization  |                                                                                                                |                    |
 | --------------- | -------------------------------------------------------------------------------------------------------------- | ------------------ |
-| Scenario Name     | Package Size                                                                                                   |        |                 |
-| Scenario ID       | Q.Size                                                                                                         |
+| Scenario Name     | Package Size                                                                                                   |        |
+| Scenario ID       | Q.Size                                                                                                         | |
 | **Description** |                                                                                                                | **Quantification** |
 | Environment     | The code is ready for a new deployment.                                                                        |                    |
 | Stimulus        | A new deployment artifact is built to update the production app.                                               |                    |
