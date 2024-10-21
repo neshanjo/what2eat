@@ -1,0 +1,14 @@
+{
+  "name": "what2eat",
+  "version": "1.0.0",
+  "description": "Sample app for demonstrating architecture design in SWAR lecture (HTWG WIN)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "pagedjs-cli": "^0.4.3"
+  }
+}

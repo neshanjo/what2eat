@@ -27,3 +27,6 @@ hs_err_pid*
 # weatherbit configuration
 src/main/resources/weatherbit.properties
 src/main/resources/application.properties
+
+# npm
+node_modules/

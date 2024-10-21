@@ -1,0 +1,41 @@
+name: Convert Markdown to PDF
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    env:
+      MARKDOWN_FILE: doc/architecture-documentation.md
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 'lts/*'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get install -y pandoc
+        npm ci
+
+    - name: Convert Markdown to PDF
+      run: |
+        currentMillis=$(date +%s%3N)
+        tempFile="${MARKDOWN_FILE%%\.md}-${currentMillis}.html"
+        pandoc "$MARKDOWN_FILE" -o "$tempFile" -f gfm -t html
+        ./node_modules/.bin/pagedjs-cli -i "$tempFile" -o "${MARKDOWN_FILE%%\.md}.pdf" --style "doc/gh-md.css"
+        rm -f "$tempFile"
+
+    - name: Upload PDF as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: architecture-documentation-pdf
+        path: doc/architecture-documentation.pdf
