@@ -101,7 +101,7 @@ The system relies on data that is queried by external system. The following sect
 
 The system scope and context has been identified as follows:
 
-![system-context](diagrams/system-context-RT.drawio.svg)
+![system-context](diagrams/system-context-RT.drawio.png)
 
 There is a single user type interacting with the system. Decisions have been made to use weather and menu data from external systems. Entering menu data manually was discarded since it requires continuos work at least twice a month by an operating person as the meals are only available two week in advance. Another idea of using a self-built weather station to measure and predict the temperature was discarded since there are free weather services with a more precise forecast.
 
@@ -111,7 +111,7 @@ In this relatively small system, there are two domains: Meals and weather. Weath
 
 In the following figure, the main entities used in the system are depicted.
 
-![domain model](diagrams/domain-model-RT.drawio.svg)
+![domain model](diagrams/domain-model-RT.drawio.png)
 
 The data model is refined further in the section [4.3. Data model](#43-data-model).
 
@@ -218,7 +218,7 @@ During architecture design, the system has been decomposed with respect to diffe
 
 The key design decision is to use different components for data display and data acquisition.
 
-![coarse functional decomposition](diagrams/coarse-functional-decomposition-RT.drawio.svg)
+![coarse functional decomposition](diagrams/coarse-functional-decomposition-RT.drawio.png)
 
 This concept is further refined by applying the client-server pattern, see [4.6. Deployment and Operation](#46-deployment-and-operation).
 
@@ -226,7 +226,7 @@ This concept is further refined by applying the client-server pattern, see [4.6.
 
 The system is decomposed into several components that all have their own concerns.
 
-![system structure](diagrams/system-structure-RT.drawio.svg)
+![system structure](diagrams/system-structure-RT.drawio.png)
 
 Design decisions:
 
@@ -236,7 +236,7 @@ Design decisions:
 
 The figure from the last section already illustrated the intended data flow between the components. This is the data model in more detail:
 
-![system data](diagrams/system-data-RT.drawio.svg)
+![system data](diagrams/system-data-RT.drawio.png)
 
 Design decisions:
 
@@ -246,9 +246,9 @@ Design decisions:
 
 Components are mapped 1:1 to modules for realizing the components at devtime, see the following two figures.
 
-![functional decomposition at runtime](diagrams/functional-driven-decomposition-services-RT.drawio.svg)
+![functional decomposition at runtime](diagrams/functional-driven-decomposition-services-RT.drawio.png)
 
-![functional decomposition at devtime](diagrams/functional-driven-decomposition-backend-DT.drawio.svg)
+![functional decomposition at devtime](diagrams/functional-driven-decomposition-backend-DT.drawio.png)
 
 Note that the realization of the modules is done with the help of additional libraries.
 
@@ -268,13 +268,13 @@ To build a releasable and deployable JAR file, the Maven package command can be 
 
 The system is decomposed into a client and a server part. These correspond to the Meal display and meal data acquisition components. During development, both client and server can be run on the same machine:
 
-![deployment-driven-decomposition-DT](diagrams/deployment-driven-decomposition-DT.drawio.svg)
+![deployment-driven-decomposition-DT](diagrams/deployment-driven-decomposition-DT.drawio.png)
 
 This will be the typical operation of the system, since it is only an educational example.
 
 In the future, the server part could be deployed to a dedicated machine. Several clients could then access the server via the internet.
 
-![deployment-driven-decomposition-RT](diagrams/deployment-driven-decomposition-RT.drawio.svg)
+![deployment-driven-decomposition-RT](diagrams/deployment-driven-decomposition-RT.drawio.png)
 
 ### 4.7. Technologies
 
@@ -286,7 +286,7 @@ The choice of technologies addresses the drivers _C2_, _C4_, _G2_, _Q.Comprehens
 
 #### 4.7.2. Solution idea
 
-![df](diagrams/systems-technology-selection-RT.drawio.svg)
+![df](diagrams/systems-technology-selection-RT.drawio.png)
 
 Regarding the backend part, we have chosen the following Java libraries:
 
@@ -323,7 +323,7 @@ We need a mechanism that makes it easy to exchange the real weather and menu ser
 
 The following figure illustrates these two concepts:
 
-![dependency injection and service factory](diagrams/implementation-di-factory-DT.drawio.svg)
+![dependency injection and service factory](diagrams/implementation-di-factory-DT.drawio.png)
 
 Note that for every service, there is an interface which can be implemented by a mock or fake service. All services get their dependencies in the constructor. This way, fake or mock services can be injected for testing purpose.
 
@@ -347,17 +347,17 @@ Related drivers: _Q.Size_ and _Q.Comprehensibility_.
 
 We introduce an in-memory cache such that meals and weather data is only queried every 30 minutes.
 
-![caching-uml](diagrams/implementation-cache-di-factory-DT.drawio.svg)
+![caching-uml](diagrams/implementation-cache-di-factory-DT.drawio.png)
 
 The caching services act as bridges to the actual services.
 
 The following diagram describes the behavior of the system when no data has been cached yet.
 
-![cache-miss](diagrams/behavior-cache-miss-RT.drawio.svg)
+![cache-miss](diagrams/behavior-cache-miss-RT.drawio.png)
 
 When cached data is available and not older than 30 minutes, data from the cache is used:
 
-![cache-hit](diagrams/behavior-cache-hit-RT.drawio.svg)
+![cache-hit](diagrams/behavior-cache-hit-RT.drawio.png)
 
 #### 5.2.3. Design decisions
 

@@ -8,8 +8,6 @@
 
 html {
   font-family: sans-serif; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /**
@@ -207,7 +205,6 @@ figure {
 */
 
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -278,38 +275,12 @@ select {
 }
 
 /**
-* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
-*    and `video` controls.
-* 2. Correct inability to style clickable `input` types in iOS.
-* 3. Improve usability and consistency of cursor style between image-type
-*    `input` and others.
-*/
-
-button,
-html input[type="button"], /* 1 */
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
-  cursor: pointer; /* 3 */
-}
-
-/**
 * Re-set default cursor for disabled elements.
 */
 
 button[disabled],
 html input[disabled] {
   cursor: default;
-}
-
-/**
-* Remove inner padding and border in Firefox 4+.
-*/
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
 }
 
 /**
@@ -336,38 +307,13 @@ input[type="radio"] {
 }
 
 /**
-* Fix the cursor style for Chrome's increment/decrement buttons. For certain
-* `font-size` values of the `input`, it causes the cursor style of the
-* decrement button to change from `default` to `text`.
-*/
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
 * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
 * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
 *    (include `-moz` to future-proof).
 */
 
 input[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box; /* 2 */
   box-sizing: content-box;
-}
-
-/**
-* Remove inner padding and search cancel button in Safari and Chrome on OS X.
-* Safari (but not Chrome) clips the cancel button when the search input has
-* padding (and `textfield` appearance).
-*/
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
 }
 
 /**
@@ -440,11 +386,11 @@ th {
   box-sizing: border-box;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 12pt;
-  line-height: 1.6;
+  font-family: sans-serif;
+  font-size: 10pt;
+  line-height: 1.5;
   margin: auto;
-  max-width: 920px;
+  max-width: 100%;
   min-width: 360px;
   padding: 2rem;
   word-wrap: break-word;
@@ -801,14 +747,14 @@ code > span.in { color: #969896; font-weight: bold; font-style: italic; } /* Inf
   }
 }
 
-/* for pagedjs, see https://pagedjs.org/documentation/5-web-design-for-print/ */
+/* for pdf conversion, see https://doc.courtbouillon.org/weasyprint/stable/common_use_cases.html#adjust-document-dimensions */
 @page {
   size: A4;
   /* These values are based on experimentation to place the text 
      with similar margins on all sides, but a slightly larger margin
      on top */
-  margin-top: 20mm;
-  margin-bottom: 5mm;
-  margin-left: 10mm;
-  margin-right: 20mm;
+  margin-top: 15mm;
+  margin-bottom: 15mm;
+  margin-left: 15mm;
+  margin-right: 15mm;
 }

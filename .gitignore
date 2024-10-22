@@ -28,5 +28,5 @@ hs_err_pid*
 src/main/resources/weatherbit.properties
 src/main/resources/application.properties
 
-# npm
-node_modules/
+# Mac
+.DS_Store
