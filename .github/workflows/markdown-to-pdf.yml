@@ -10,6 +10,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
+    - name: Set short SHA as an environment variable
+      run: echo "SHORT_SHA=${GITHUB_SHA:0:8}" >> $GITHUB_ENV  # Truncate the SHA and store it as an env variable
+
     - name: Install tools
       run: sudo apt-get install -y pandoc weasyprint
 
@@ -22,9 +25,14 @@ jobs:
         weasyprint -s doc/gh-md.css -e UTF8 "$tempFile" "${markdownFile%%\.md}.pdf"
         rm -f "$tempFile"
 
-    - name: Upload PDF as artifact
-      uses: actions/upload-artifact@v4
+    - name: Create Documentation Release
+      uses: softprops/action-gh-release@v2
       with:
-        name: architecture-documentation.pdf
-        path: doc/architecture-documentation.pdf
-
+        tag_name: 'documentation-${{ github.run_number }}-${{ env.SHORT_SHA }}-${{ github.ref_name }}'
+        name: 'Documentation ${{ github.run_number }}-${{ env.SHORT_SHA }}-${{ github.ref_name }}'
+        files: doc/architecture-documentation.pdf
+        draft: false
+        prerelease: false
+        make_latest: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
