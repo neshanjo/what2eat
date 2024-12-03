@@ -1,0 +1,247 @@
+@startuml ADF-elements
+
+
+'-------------------------------------
+'ADF.puml, version 1.0.0
+'-------------------------------------
+'Copyright (c) 2024 Johannes Schneider
+'-------------------------------------
+'This code is distributed under the MIT License, 
+'see https://github.com/architecture-decomposition-framework/adf-plantuml/blob/main/LICENSE for details.
+
+'================ STYLING, COLOURS AND CONFIGURATION =================
+
+skinparam {
+    'no border radius expect for Project Increment
+    RoundCorner 0
+    Rectangle<<Project Increment>> {
+        RoundCorner 30
+        FontStyle normal
+    }
+
+    'Plain class style
+    CircledCharacterRadius 0
+    CircledCharacterFontSize 0
+    ClassBackgroundColor White
+
+    'set font to Verdana and style to normal (unfortunately, there is no DefaultStereotypeFontStyle)
+    DefaultFontName Verdana
+    RectangleFontStyle normal
+    DefaultFontStyle normal
+    ActorStereotypeFontStyle normal
+    AgentStereotypeFontStyle normal
+    ArchimateStereotypeFontStyle normal
+    ArtifactStereotypeFontStyle normal
+    BoundaryStereotypeFontStyle normal
+    CardStereotypeFontStyle normal
+    ClassStereotypeFontStyle normal
+    CloudStereotypeFontStyle normal
+    ComponentStereotypeFontStyle normal
+    ControlStereotypeFontStyle normal
+    DatabaseStereotypeFontStyle normal
+    DesignedDomainStereotypeFontStyle normal
+    DomainStereotypeFontStyle normal
+    EntityStereotypeFontStyle normal
+    FileStereotypeFontStyle normal
+    FolderStereotypeFontStyle normal
+    FrameStereotypeFontStyle normal
+    HexagonStereotypeFontStyle normal
+    InterfaceStereotypeFontStyle normal
+    LabelStereotypeFontStyle normal
+    MachineStereotypeFontStyle normal
+    NodeStereotypeFontStyle normal
+    ObjectStereotypeFontStyle normal
+    PackageStereotypeFontStyle normal
+    ParticipantStereotypeFontStyle normal
+    PersonStereotypeFontStyle normal
+    QueueStereotypeFontStyle normal
+    RectangleStereotypeFontStyle normal
+    RequirementStereotypeFontStyle normal
+    SequenceStereotypeFontStyle normal
+    StackStereotypeFontStyle normal
+    StorageStereotypeFontStyle normal
+    UsecaseStereotypeFontStyle normal
+
+    'Notes with white background
+    NoteBackgroundColor White
+    'Lollipop interfaces transparent
+    InterfaceBackgroundColor transparent
+    InterfaceBorderColor Black
+
+    'ADFOutsidePort
+    rectangle<<Invisible>> {
+        borderColor Transparent
+        fontColor Transparent
+        BackgroundColor Transparent
+    }
+}
+
+hide empty members
+hide empty methods
+hide empty fields
+
+allowmixing
+
+'main value is shade==1. Other values (0, 2, 3) are calculated by 
+'in-/decreasing lightness in HSL model
+!function colorSWRT($shade)
+!if $shade == 0
+    !return "#FFF7E0"
+!elseif $shade == 1
+    !return "#FFF2CC"
+!elseif $shade == 2
+    !return "#FFEAAD"
+!elseif $shade == 3
+    !return "#FFE28F"
+!else
+    !return "#FFF2CC"
+!endif
+!endfunction
+
+!function colorSWDT($shade)
+!if $shade == 0
+    !return "#CAE7BB"
+!elseif $shade == 1
+    !return "#B9E0A5"
+!elseif $shade == 2
+    !return "#A6D88D"
+!elseif $shade == 3
+    !return "#95D076"
+!else
+    !return "#FFF2CC"
+!endif
+!endfunction
+
+!function colorENRT($shade)
+!if $shade == 0
+    !return "#FFF3E5"
+!elseif $shade == 1
+    !return "#FFE6CC"
+!elseif $shade == 2
+    !return "#FFDAB3"
+!elseif $shade == 3
+    !return "#FFCD99"
+!else
+    !return "#FFF2CC"
+!endif
+!endfunction
+
+!$col_tech = "#F8CECC"
+!$col_notes = "#FFFFFF"
+
+'================ COMMON ELEMENTS =================
+
+!unquoted procedure ADFRole($id, $name) 
+    actor "**$name**" <<Role>> as $id colorSWRT(1)
+!endprocedure
+
+!unquoted procedure ADFTechnology($id, $name)
+    rectangle "**$name**" <<Technology>> as $id $col_tech
+!endprocedure
+
+!unquoted procedure ADFInvisibleElement($id)
+    rectangle " " <<Invisible>> as $id
+!endprocedure
+
+!unquoted procedure ADFRelation($from, $to, $type, $description = "", $direction = "")
+    !local $descriptionWithNewline = ""
+    !if $description != ""
+        !local $descriptionWithNewline = "\n" + $description
+    !endif
+    $from .$direction.> $to : <<$type>>$descriptionWithNewline
+!endprocedure
+
+'================ SOFTWARE@RUNTIME ELEMENTS =================
+
+!unquoted procedure ADFSystem($id, $name, $shade = 1)
+    node "**$name**" <<System>> as $id colorSWRT($shade)
+!endprocedure
+
+!unquoted procedure ADFExternalSystem($id, $name, $shade = 1)
+    node "**$name**" <<External System>> as $id colorSWRT($shade)
+!endprocedure
+
+!unquoted procedure ADFLayer($id, $name, $shade = 1)
+    folder "<<Layer>>\n**$name**" as $id colorSWRT($shade)
+!endprocedure
+
+!unquoted procedure ADFCluster($id, $name, $shade = 1)
+    folder "<<Cluster>>\n**$name**" as $id colorSWRT($shade)
+!endprocedure
+
+!unquoted procedure ADFComponent($id, $name, $shade = 1)
+    Component "**$name**" <<Component>> as $id colorSWRT($shade)
+!endprocedure
+
+!unquoted procedure ADFInterface($id, $name, $shade = 1)
+    rectangle "**$name**" <<Interface>> as $id colorENRT($shade)
+!endprocedure
+
+!unquoted procedure ADFData($id, $name, $shade = 1)
+    class "<<Datatype>>\n**$name**" as $id colorSWRT($shade)
+!endprocedure
+
+'================ SOFTWARE@DEVTIME ELEMENTS =================
+
+!unquoted procedure ADFModule($id, $name, $shade = 1)
+    rectangle "**$name**" <<Module>> as $id colorSWDT($shade)
+!endprocedure
+
+!unquoted procedure ADFInterface($id, $name, $shade = 1)
+    rectangle "**$name**" <<Interface>> as $id colorSWDT($shade)
+!endprocedure
+
+!unquoted procedure ADFPackage($id, $name, $shade = 1)
+    folder "<<Package>>\n**$name**" as $id colorSWDT($shade)
+!endprocedure
+
+!unquoted procedure ADFDatatype($id, $name, $shade = 1)
+    class "<<Datatype>>\n**$name**" as $id colorSWDT($shade)
+!endprocedure
+
+!unquoted procedure ADFLibrary($id, $name, $shade = 1)
+    rectangle "**$name**" <<Library>> as $id colorSWDT($shade)
+!endprocedure
+
+'================ ENVIRONMENT@RUNTIME ELEMENTS =================
+
+!unquoted procedure ADFComputingNode($id, $name, $shade = 1)
+    node "**$name**" <<Computing Node>> as $id colorENRT($shade)
+!endprocedure
+
+!unquoted procedure ADFExecutionEnvironment($id, $name, $shade = 1)
+    node "**$name**" <<Execution Environment>> as $id colorENRT($shade)
+!endprocedure
+
+!unquoted procedure ADFDeploymentArtifact($id, $name, $shade = 1)
+    artifact "**$name**" <<Deployment Artifact>> as $id colorSWDT($shade)
+!endprocedure
+
+!unquoted procedure ADFOperationProcess($id, $name, $shade = 1)
+    action "**$name**" <<Operation Process>> as $id colorENRT($shade)
+!endprocedure
+
+!unquoted procedure ADFThread($id, $name, $shade = 1)
+    rectangle "**$name**" <<Thread>> as $id colorENRT($shade)
+!endprocedure
+
+!unquoted procedure ADFOrganizationalUnit($id, $name, $shade = 1)
+    node "**$name**" <<Organizational Unit>> as $id colorENRT($shade)
+!endprocedure
+
+'================ ENVIRONMENT@DEVTIME ELEMENTS =================
+
+!unquoted procedure ADFProjectIncrement($id, $name, $shade = 1)
+    rectangle "**$name**" <<Project Increment>> as $id colorSWDT($shade)
+!endprocedure
+
+!unquoted procedure ADFDevelopmentProcess($id, $name, $shade = 1)
+    action "**$name**" <<Development Process>> as $id colorSWDT($shade)
+!endprocedure
+
+!unquoted procedure ADFDevelopmentTool($id, $name, $shade = 1)
+    node "**$name**" <<Development Tool>> as $id colorSWDT($shade)
+!endprocedure
+
+
+@enduml

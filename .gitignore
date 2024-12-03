@@ -30,3 +30,6 @@ src/main/resources/application.properties
 
 # Mac
 .DS_Store
+
+# VS Code Workspace settings
+.vscode/
